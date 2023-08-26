@@ -46,12 +46,14 @@ Records: 5  Duplicates: 0  Warnings: 0
 
 Query OK, 6 rows affected (0.00 sec)
 Records: 6  Duplicates: 0  Warnings: 0
-
-mysql> exit
-Bye
 ```
 
 Then type exit to exit the mysql instance.
+
+```
+mysql> exit
+Bye
+```
 
 -Step #5: From directory where you cloned the repo, run `node server.js` from the command line and then the app will start listening in your localhost on port 3001 and now the Employee Manager App should load with prompts.
 

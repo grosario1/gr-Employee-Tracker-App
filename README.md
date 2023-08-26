@@ -27,9 +27,10 @@ First you should clone this repo (https://github.com/grosario1/gr-Employee-Track
 
 e.g.
 
-![schema]("../../assets/source-schema.jpg)
+![source-schema](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/a9857d7b-67d8-48ba-ba89-c4d1e83f2e41)
 
-![seeds]("../../assets/source-seeds.jpg)
+![source-seeds](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/60028689-aead-4bf3-a14e-df5dc08c6f5f)
+
 
 
 Then type exit to exit the mysql instance.

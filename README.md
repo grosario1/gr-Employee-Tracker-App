@@ -27,6 +27,15 @@ First you should clone this repo (https://github.com/grosario1/gr-Employee-Track
 
 e.g.
 
+`
+mysql> source db/schema.sql
+Query OK, 3 rows affected (0.02 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Database changed
+`
+
 ![source-schema](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/462e77e5-d379-4fec-9b47-8532f9f4bfcc)
 
 ![source-seeds](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/f1931711-bcf3-4447-8cad-84f2025ccbdb)

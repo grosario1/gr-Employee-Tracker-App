@@ -53,10 +53,24 @@ app.listen(PORT, () => {
     });
 });
 
+class Department {
+    constructor(db) {
+      this.db = db;
+    }
+  
+    getAllDepartments(callback) {
+      const sql = 'SELECT id, name FROM departments';
+      this.db.query(sql, [], callback);
+    }
+  
+    addDepartment(name, callback) {
+      const sql = 'INSERT INTO departments (name) VALUES (?)';
+      this.db.query(sql, [name], callback);
+    }
+  }
+  
 function startApp() {
-    const department = new Department(connection);
-  const role = new Role(connection);
-  const employee = new Employee(connection);
+  const department = new Department(connection);
 
   const actions = {
     'View all departments': () => {
@@ -113,7 +127,7 @@ function startApp() {
         process.exit();
       }
     };
-    
+
     function promptAction() {
         inquirer.prompt([
             {

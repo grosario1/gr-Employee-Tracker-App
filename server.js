@@ -53,6 +53,7 @@ app.listen(PORT, () => {
     });
 });
 
+
 class Department {
     constructor(db) {
         this.db = db;
@@ -68,6 +69,7 @@ class Department {
         this.db.query(sql, [name], callback);
     }
 }
+
 class Role {
     constructor(db) {
         this.db = db;

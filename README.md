@@ -59,8 +59,7 @@ Bye
 
 - Example of deployed Employee Tracker App (see demo video):
 
-![get-started]("./../public/assets/get-started-page.jpg)
-
+[Untitled_ Aug 26, 2023 6_17 PM.webm](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/6e698278-144c-4bb8-a38e-0eeb261863fe)
 
 
 You can find code repo [here.](https://github.com/grosario1/gr-Employee-Tracker-App) 

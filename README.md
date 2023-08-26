@@ -7,16 +7,14 @@ Info Coming Soon
 - [gr-Employee-Tracker-App](#gr-employee-tracker-app)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
-  - [Installation - local testing](#installation---local-testing)
+  - [Installation](#installation)
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [Contact Info](#contact-info)
 
-## Installation - local testing 
+## Installation 
 
-Localhost Testing - local testing without a web server or PaaS like Heroku: 
-
-First you should clone this repo (https://github.com/grosario1/gr-Employee-Tracker-App.git). You will need to ensure you install the npm utility and express.js framework in order for you test the app locally. You can follow the instructions to install the utility from here: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm. Once, it is install, use the cmd to navigate to the repo you just cloned and run.... `node init -y` to initized the node js project, then install the express js package by running `npm install --save express` . From the directory where you cloned the repo, you should see a server.js file, uncomment the entire code line that contains the localhost url `App listening at http://localhost:${PORT}` and comment that does not contain localhost url, the line that only has the ${PORT} variable. Save the file. Then run `node server.js` from the command line and then the express web app will start listening in your localhost on port 3001. The console will log `App listening at http://localhost:3001` Add the url into the browser and the notetaker app/page will show up.
+First you should clone this repo (https://github.com/grosario1/gr-Employee-Tracker-App.git). You will need to ensure you install the npm utility and express.js framework in order for you test the app locally. You can follow the instructions to install the utility from here: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm. Once, it is install, use the cmd to navigate to the repo you just cloned and run.... `node init -y` to initized the node js project, then install the express js package by running `npm install --save express` . From the directory where you cloned the repo, you should see a server.js file, uncomment the entire code line that contains the localhost url `App listening at http://localhost:${PORT}` and comment that does not contain localhost url, the line that only has the ${PORT} variable. Save the file. Then run `node server.js` from the command line and then the app will start listening in your localhost on port 3001.
 ## Usage
 
 Info Coming Soon

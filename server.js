@@ -52,8 +52,6 @@ app.listen(PORT, () => {
         startApp();
     });
 });
-
-
 class Department {
     constructor(db) {
         this.db = db;
@@ -99,6 +97,10 @@ class Employee {
     addEmployee(first_name, last_name, role_id, manager_id, callback) {
         const sql = 'INSERT INTO employees (first_name, last_name, role_id, manager_id) VALUES (?, ?, ?, ?)';
         this.db.query(sql, [first_name, last_name, role_id, manager_id], callback);
+    }
+    updateEmployeeRole(employee_id, role_id, callback) {
+        const sql = 'UPDATE employees SET role_id = ? WHERE id = ?';
+        this.db.query(sql, [role_id, employee_id], callback);
     }
 }
 
@@ -188,6 +190,80 @@ function startApp() {
                             console.log(`Role "${answers.title}" added successfully.`);
                         }
                         promptAction();
+                    });
+                });
+            });
+        },
+        'Add an employee': () => {
+            role.getAllRoles((err, roles) => {
+                if (err) {
+                    console.error('Error fetching roles:', err);
+                    return;
+                }
+
+                inquirer.prompt([
+                    {
+                        type: 'input',
+                        name: 'first_name',
+                        message: 'Enter the employee\'s first name:'
+                    },
+                    {
+                        type: 'input',
+                        name: 'last_name',
+                        message: 'Enter the employee\'s last name:'
+                    },
+                    {
+                        type: 'list',
+                        name: 'role_id',
+                        message: 'Select the employee\'s role:',
+                        choices: roles.map(role => ({ name: role.title, value: role.id }))
+                    },
+                    // ... (Other prompts for manager selection)
+                ]).then(answers => {
+                    employee.addEmployee(answers.first_name, answers.last_name, answers.role_id, answers.manager_id, err => {
+                        if (err) {
+                            console.error('Error adding employee:', err);
+                        } else {
+                            console.log(`Employee "${answers.first_name} ${answers.last_name}" added successfully.`);
+                        }
+                        promptAction();
+                    });
+                });
+            });
+        },
+        'Update an employee role': () => {
+            employee.getAllEmployees((err, employees) => {
+                if (err) {
+                    console.error('Error fetching employees:', err);
+                    return;
+                }
+                role.getAllRoles((err, roles) => {
+                    if (err) {
+                        console.error('Error fetching roles:', err);
+                        return;
+                    }
+                    inquirer.prompt([
+                        {
+                            type: 'list',
+                            name: 'employee_id',
+                            message: 'Select the employee to update:',
+                            choices: employees.map(emp => ({ name: `${emp.first_name} ${emp.last_name}`, value: emp.id }))
+                        },
+                        {
+                            type: 'list',
+                            name: 'role_id',
+                            message: 'Select the employee\'s new role:',
+                            choices: roles.map(role => ({ name: role.title, value: role.id }))
+                        }
+                    ]).then(answers => {
+                        employee.updateEmployeeRole(answers.employee_id, answers.role_id, err => {
+                            if (err) {
+                                console.error('Error updating employee role:', err);
+                            } else {
+                                console.log('Employee\'s role updated successfully.');
+                            }
+                            promptAction();
+                        });
                     });
                 });
             });

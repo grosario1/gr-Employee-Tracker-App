@@ -27,9 +27,9 @@ First you should clone this repo (https://github.com/grosario1/gr-Employee-Track
 
 e.g.
 
-![source-schema](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/a9857d7b-67d8-48ba-ba89-c4d1e83f2e41)
+![source-schema](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/462e77e5-d379-4fec-9b47-8532f9f4bfcc)
 
-![source-seeds](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/60028689-aead-4bf3-a14e-df5dc08c6f5f)
+![source-seeds](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/f1931711-bcf3-4447-8cad-84f2025ccbdb)
 
 
 

@@ -68,9 +68,20 @@ class Department {
       this.db.query(sql, [name], callback);
     }
   }
+  class Role {
+    constructor(db) {
+      this.db = db;
+    }
   
+    getAllRoles(callback) {
+      const sql = 'SELECT r.id, r.title, r.salary, d.name AS department FROM roles r JOIN departments d ON r.department_id = d.id';
+      this.db.query(sql, [], callback);
+    }
+  }
+
 function startApp() {
   const department = new Department(connection);
+  const role = new Role(connection);
 
   const actions = {
     'View all departments': () => {

@@ -43,11 +43,32 @@ const connection = new Database(dbConfig);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
     connection.query('SELECT 1', (err) => {
-      if (err) {
-        console.error('Error connecting to the database:', err);
-      } else {
-        console.log('Connected to the database');
-        console.log(`Employee Manager`);
-      }
+        if (err) {
+            console.error('Error connecting to the database:', err);
+        } else {
+            console.log('Connected to the database');
+            console.log(`Employee Manager`);
+        }
+        startApp();
     });
-  });
+});
+
+function startApp() {
+    function promptAction() {
+        inquirer.prompt([
+            {
+                type: 'list',
+                name: 'action',
+                message: 'What would you like to do?',
+                choices: Object.keys(actions)
+            }
+        ]).then(answer => {
+            const selectedAction = actions[answer.action];
+            if (selectedAction) {
+                selectedAction();
+            }
+        });
+    }
+
+    promptAction();
+}

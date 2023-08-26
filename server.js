@@ -154,6 +154,42 @@ function startApp() {
                 });
             });
         },
+        'Add a role': () => {
+            department.getAllDepartments((err, departments) => {
+                if (err) {
+                    console.error('Error fetching departments:', err);
+                    return;
+                }
+
+                inquirer.prompt([
+                    {
+                        type: 'input',
+                        name: 'title',
+                        message: 'Enter the name of the role:'
+                    },
+                    {
+                        type: 'input',
+                        name: 'salary',
+                        message: 'Enter the salary for the role:'
+                    },
+                    {
+                        type: 'list',
+                        name: 'department_id',
+                        message: 'Select the department for the role:',
+                        choices: departments.map(dep => ({ name: dep.name, value: dep.id }))
+                    }
+                ]).then(answers => {
+                    role.addRole(answers.title, answers.salary, answers.department_id, (err) => {
+                        if (err) {
+                            console.error('Error adding role:', err);
+                        } else {
+                            console.log(`Role "${answers.title}" added successfully.`);
+                        }
+                        promptAction();
+                    });
+                });
+            });
+        },
         'Exit': () => {
             connection.close();
             console.log('Goodbye!');

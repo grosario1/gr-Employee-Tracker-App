@@ -24,9 +24,10 @@ First you should clone this repo (https://github.com/grosario1/gr-Employee-Track
 -Step #3: From directory where you cloned the repo, log into the mysql database, `mysql -uroot -p` 
 -Step #4: Ensure you source the database schema and seeds files. 
 e.g. \
-![source-schema]("/../assets/source-schema.jpg)
+![source-schema](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/eb3cf973-581d-41b1-8000-daef98b4c3cc)
 
-![source-seeds]("/../assets/source-seeds.jpg)
+![source-seeds](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/16ce2cb3-46a3-442b-8ee2-ba2d2469fa66)
+
 
 Then type exit to exit the mysql instance.
 

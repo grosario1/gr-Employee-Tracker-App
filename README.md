@@ -27,20 +27,29 @@ First you should clone this repo (https://github.com/grosario1/gr-Employee-Track
 
 e.g.
 
-`
+```
 mysql> source db/schema.sql
 Query OK, 3 rows affected (0.02 sec)
 
 Query OK, 1 row affected (0.00 sec)
 
 Database changed
-`
+```
 
-![source-schema](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/462e77e5-d379-4fec-9b47-8532f9f4bfcc)
+```
+mysql> source db/seeds.sql
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
 
-![source-seeds](https://github.com/grosario1/gr-Employee-Tracker-App/assets/26330325/f1931711-bcf3-4447-8cad-84f2025ccbdb)
+Query OK, 5 rows affected (0.00 sec)
+Records: 5  Duplicates: 0  Warnings: 0
 
+Query OK, 6 rows affected (0.00 sec)
+Records: 6  Duplicates: 0  Warnings: 0
 
+mysql> exit
+Bye
+```
 
 Then type exit to exit the mysql instance.
 

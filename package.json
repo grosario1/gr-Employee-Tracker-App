@@ -1,7 +1,7 @@
 {
   "name": "gr-employee-tracker-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a content management system/application designed to keep track of a company's departments, employees, employee roles, salary and reporting manager. The application allows for management of employee information. For instance view all departments, view current roles, add departments, add roles, add new employees and update employees roles. It is a command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

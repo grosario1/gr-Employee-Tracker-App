@@ -9,6 +9,7 @@ This is a content management system/application designed to keep track of a comp
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Tools \& resources used:](#tools--resources-used)
   - [Contributing](#contributing)
   - [Contact Info](#contact-info)
 
@@ -19,7 +20,7 @@ First you should clone this repo (https://github.com/grosario1/gr-Employee-Track
 
 - **Step #1:** Install MySQL into your local environment. You can follow the installation guide here: https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/
 
-- **Step #2:** Ensure you start the mysql server in your local environment: see guides (https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+- **Step #2:** Ensure you start the mysql server in your local environment. See guides: (https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
 
 - **Step #3:** From directory where you cloned the repo, log into the mysql database, `mysql -uroot -p`
 
@@ -64,6 +65,17 @@ Bye
 
 
 You can find code repo [here.](https://github.com/grosario1/gr-Employee-Tracker-App) 
+
+
+## Tools & resources used:
+
+- Module 12 examples
+- JavaScript
+- local mySQL client - https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/
+- npm package manager - https://docs.npmjs.com/cli/v8/commands/npm-install
+- mysql2 - https://www.npmjs.com/package/mysql2
+- express js web framework - https://expressjs.com/ 
+- dotenv npm package - https://www.npmjs.com/package/dotenv
 
 ## Contributing
 The project is open for contributions. If you would like to contribute, create a new branch from the main and add any updates as deemed necessary. If you should find any issues with the code, please open a 'New Issue' from https://github.com/grosario1/gr-Employee-Tracker-App/issues and these request can be review and updated accordingly.

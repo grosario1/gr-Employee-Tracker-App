@@ -54,6 +54,66 @@ app.listen(PORT, () => {
 });
 
 function startApp() {
+    const department = new Department(connection);
+  const role = new Role(connection);
+  const employee = new Employee(connection);
+
+  const actions = {
+    'View all departments': () => {
+      department.getAllDepartments((err, departments) => {
+        if (err) {
+          console.error('Error fetching departments:', err);
+          return;
+        }
+        console.table(departments);
+        promptAction();
+      });
+    },
+    'View all roles': () => {
+      role.getAllRoles((err, roles) => {
+        if (err) {
+          console.error('Error fetching roles:', err);
+          return;
+        }
+        console.table(roles);
+        promptAction();
+      });
+    },
+    'View all employees': () => {
+      employee.getAllEmployees((err, employees) => {
+        if (err) {
+          console.error('Error fetching employees:', err);
+          return;
+        }
+        console.table(employees);
+        promptAction();
+      });
+    },
+    'Add a department': () => {
+      inquirer.prompt([
+        {
+          type: 'input',
+          name: 'name',
+          message: 'Enter the name of the department:'
+        }
+      ]).then(answers => {
+        department.addDepartment(answers.name, (err) => {
+          if (err) {
+            console.error('Error adding department:', err);
+          } else {
+            console.log(`Department "${answers.name}" added successfully.`);
+          }
+          promptAction();
+        });
+      });
+    },
+    'Exit': () => {
+        connection.close();
+        console.log('Goodbye!');
+        process.exit();
+      }
+    };
+    
     function promptAction() {
         inquirer.prompt([
             {

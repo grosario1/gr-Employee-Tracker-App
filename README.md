@@ -1,7 +1,7 @@
 # gr-Employee-Tracker-App
 ## Description
 
-Info Coming Soon
+This is a content management system/application designed to keep track of a company's departments, employees, employee roles, salary and reporting manager. The application allows for management of employee information. For instance view all departments, view current roles, add departments, add roles, add new employees and update employees roles. It is a command-line application to manage a company's employee database, using Node.js, Inquirer, and MySQL.
 
 ## Table of Contents
 - [gr-Employee-Tracker-App](#gr-employee-tracker-app)
@@ -14,10 +14,23 @@ Info Coming Soon
 
 ## Installation 
 
-First you should clone this repo (https://github.com/grosario1/gr-Employee-Tracker-App.git). You will need to ensure you install the npm utility and express.js framework in order for you test the app locally. You can follow the instructions to install the utility from here: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm. Once, it is install, use the cmd to navigate to the repo you just cloned and run.... `node init -y` to initized the node js project, then install the express js package by running `npm install --save express` . From the directory where you cloned the repo, you should see a server.js file, uncomment the entire code line that contains the localhost url `App listening at http://localhost:${PORT}` and comment that does not contain localhost url, the line that only has the ${PORT} variable. Save the file. Then run `node server.js` from the command line and then the app will start listening in your localhost on port 3001.
+First you should clone this repo (https://github.com/grosario1/gr-Employee-Tracker-App.git). You will need to ensure you install the npm utility and express.js framework in order for you run the app. You can follow the instructions to install the utility from here: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm. Once, it is install, use the cmd to navigate to the repo you just cloned and run.... `node init -y` to initized the node js project, then install the express js package by running `npm install --save express`. You will also need to install the mysql2 framework in order to allow to code to connect to your mysql instance and database. Since you will need to connect to the database using a user name and password, it is recommended to store your credentials into a different file and call them from your code using variables. With this being said, in addtion to installing the other npm frameworks & modules, you should install `dotenv` which is a zero-dependency module that loads environment variables from a .env file into process.env. Install this module by running `npm install --save dotenv`.
 ## Usage
 
-Info Coming Soon
+-Step #1: Install MySQL into your local environment. You can follow the installation guide here: https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/
+
+-Step #2: Ensure you start the mysql server in your local environment: see guides (https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+
+-Step #3: From directory where you cloned the repo, log into the mysql database, `mysql -uroo -p` 
+-Step #4: Ensure you source the database schema and seeds files. 
+e.g. 
+![source-schema]("./../assets/source-schema.jpg)
+
+![source-seeds]("./../assets/source-seeds.jpg)
+
+Then type exit to exit the mysql instance.
+
+-Step #5: From directory where you cloned the repo, run `node server.js` from the command line and then the app will start listening in your localhost on port 3001 and now the Employee Manager App should load with prompts.
 
 - Example of deployed Employee Tracker App (see demo video):
 

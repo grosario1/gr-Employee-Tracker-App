@@ -17,13 +17,13 @@ This is a content management system/application designed to keep track of a comp
 First you should clone this repo (https://github.com/grosario1/gr-Employee-Tracker-App.git). You will need to ensure you install the npm utility and express.js framework in order for you run the app. You can follow the instructions to install the utility from here: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm. Once, it is install, use the cmd to navigate to the repo you just cloned and run.... `node init -y` to initized the node js project, then install the express js package by running `npm install --save express`. You will also need to install the mysql2 framework in order to allow to code to connect to your mysql instance and database. Since you will need to connect to the database using a user name and password, it is recommended to store your credentials into a different file and call them from your code using variables. With this being said, in addtion to installing the other npm frameworks & modules, you should install `dotenv` which is a zero-dependency module that loads environment variables from a .env file into process.env. Install this module by running `npm install --save dotenv`.
 ## Usage
 
--Step #1: Install MySQL into your local environment. You can follow the installation guide here: https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/
+- **Step #1:** Install MySQL into your local environment. You can follow the installation guide here: https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/
 
--Step #2: Ensure you start the mysql server in your local environment: see guides (https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
+- **Step #2:** Ensure you start the mysql server in your local environment: see guides (https://dev.mysql.com/doc/mysql-installation-excerpt/5.7/en/)
 
--Step #3: From directory where you cloned the repo, log into the mysql database, `mysql -uroot -p`
+- **Step #3:** From directory where you cloned the repo, log into the mysql database, `mysql -uroot -p`
 
--Step #4: Ensure you source the database schema and seeds files.
+- **Step #4:** Ensure you source the database schema and seeds files.
 
 e.g.
 
@@ -55,7 +55,7 @@ mysql> exit
 Bye
 ```
 
--Step #5: From directory where you cloned the repo, run `node server.js` from the command line and then the app will start listening in your localhost on port 3001 and now the Employee Manager App should load with prompts.
+- **Step #5:** From directory where you cloned the repo, run `node server.js` from the command line and then the app will start listening in your localhost on port 3001 and now the Employee Manager App should load with prompts.
 
 - Example of deployed Employee Tracker App (see demo video):
 
